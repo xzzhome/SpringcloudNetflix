@@ -1,0 +1,5 @@
+# Project exclude paths
+/Springclound-eurekaServer/target/
+/Springclound-orderServer/target/
+/Springclound-pojoServer/target/
+/Springclound-userServer/target/

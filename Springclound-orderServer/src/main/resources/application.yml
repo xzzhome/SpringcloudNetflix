@@ -1,0 +1,15 @@
+server:
+  port: 1030 # user服务端口号
+
+eureka:
+  client: # Eureka客户端配置，指向注册中心地址
+    serviceUrl:
+      defaultZone: http://localhost:1010/eureka/
+    registery-fetch-interval-seconds: 10
+  instance:
+    prefer-ip-address: true # 开启使用IP地址进行注册
+    instance-id: order-server:1030 # 修改实例Id
+
+spring:
+  application: # 指定此服务的应用名称
+    name: order-server

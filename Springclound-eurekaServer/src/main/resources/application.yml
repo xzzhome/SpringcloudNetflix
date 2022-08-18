@@ -1,0 +1,11 @@
+server: # Eureka服务端端口号
+  port: 1010
+
+eureka: # Eureka配置
+  instance: # 定义该服务Ip
+    hostname: localhost
+  client: # Eureka客户端配置
+    registerWithEureka: false # 该服务不注册到到注册中心
+    fetchRegistry: false # 该服务不拉取注册表
+    serviceUrl: # 注册中心地址 http://localhost:1010/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

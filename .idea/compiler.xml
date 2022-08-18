@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Springclound-pojoServer" />
+        <module name="Springclound-orderServer" />
+        <module name="Springclound-eurekaServer" />
+        <module name="Springclound-userServer" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Springclound-eurekaServer" options="-parameters" />
+      <module name="Springclound-orderServer" options="-parameters" />
+      <module name="Springclound-pojoServer" options="-parameters" />
+      <module name="Springclound-userServer" options="-parameters" />
+    </option>
+  </component>
+</project>
