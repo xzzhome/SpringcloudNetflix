@@ -13,6 +13,7 @@
         <module>Springclound-orderServer</module>
         <module>Springclound-eurekaServer</module>
         <module>Springclound-pojoServer</module>
+        <module>springcloud-pay-server</module>
     </modules>
 
     <properties>

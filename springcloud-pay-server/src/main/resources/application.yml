@@ -1,0 +1,22 @@
+server:
+  port: 1040 # user服务端口号
+
+eureka:
+  client:
+    serviceUrl: # Eureka客户端配置，指向注册中心地址
+      defaultZone: http://localhost:1010/eureka/
+    registery-fetch-interval-seconds: 10
+  instance:
+    prefer-ip-address: true # 开启使用IP地址进行注册
+    instance-id: pay-server:1040 # 修改实例Id
+
+spring:
+  application: # 指定此服务的应用名称
+    name: pay-server
+
+feign:
+  hystrix:
+    enabled: true #开启熔断支持
+
+
+

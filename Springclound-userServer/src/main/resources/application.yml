@@ -13,5 +13,23 @@ eureka:
 spring:
   application: # 指定此服务的应用名称
     name: user-server
+  profiles:
+    active: user-server1
+---
+server:
+  port: 1020
+eureka:
+  instance:
+    instance-id: user-server:1020
+spring:
+  profiles: user-server1
+---
+server:
+  port: 1021
+eureka:
+  instance:
+    instance-id: user-server:1021
+spring:
+  profiles: user-server2
 
 
