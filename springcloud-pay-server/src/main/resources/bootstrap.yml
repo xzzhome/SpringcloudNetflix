@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      #uri: http://localhost:1030
+      name: application-pay
+      profile: test
+      label: master
+      discovery:
+        service-id: config-server #配置中心服务名
+        enabled: true #使用服务名访问配置中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1010/eureka/
+      #注册中心地址,需要从注册中心使用服务名发现配置中心

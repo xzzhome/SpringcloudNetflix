@@ -2,6 +2,7 @@ package com.xzz.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.xzz.Student;
 import com.xzz.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,12 @@ public class OrderController {
         String url = "http://user-server/user/"+id;
         return restTemplate.getForObject(url,User.class);
     }
+
+    /*@GetMapping("/order/{id}")
+    public Student getById(@PathVariable("id") Long id){
+        String url = "http://student-server/student/"+id;
+        return restTemplate.getForObject(url,Student.class);
+    }*/
 
     //降级方法 ， 参数和返回值必须和被熔断的方法一致 ，方法名要和fallbackMethod 的值一致
     public User fallbackMethod(@PathVariable("id")Long id){

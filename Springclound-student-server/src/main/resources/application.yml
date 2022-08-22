@@ -1,5 +1,5 @@
 server:
-  port: 1020 # user服务端口号
+  port: 1100 # user服务端口号
 
 eureka:
   client:
@@ -8,13 +8,11 @@ eureka:
     registery-fetch-interval-seconds: 10
   instance:
     prefer-ip-address: true # 开启使用IP地址进行注册
-    instance-id: user-server:1020 # 修改实例Id
+    instance-id: student-server:1100 # 修改实例Id
 
 spring:
   application: # 指定此服务的应用名称
-    name: user-server
-  profiles:
-    active: user-server1
+    name: student-server
   datasource:
     username: root
     password: 123456
@@ -27,21 +25,5 @@ mybatis:
 logging:
   level:
     com.xzz: trace
----
-server:
-  port: 1020
-eureka:
-  instance:
-    instance-id: user-server:1020
-spring:
-  profiles: user-server1
----
-server:
-  port: 1021
-eureka:
-  instance:
-    instance-id: user-server:1021
-spring:
-  profiles: user-server2
 
 

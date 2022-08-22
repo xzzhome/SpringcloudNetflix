@@ -1,0 +1,24 @@
+server:
+  port: 1070 #服务端口号
+
+eureka:
+  client:
+    serviceUrl: # Eureka客户端配置，指向注册中心地址
+      defaultZone: http://localhost:1010/eureka/
+    registery-fetch-interval-seconds: 10
+  instance:
+    prefer-ip-address: true # 开启使用IP地址进行注册
+    instance-id: config-server:1070 # 修改实例Id
+
+spring:
+  application: # 指定此服务的应用名称
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #配置远程仓库地址，去仓库中复制
+          uri: https://github.com/xzzhome/springclound-config.git
+          username: 1091526909@qq.com    #仓库是私有的需要账号
+          password: Aa15907041632
+          #search-paths: 路径 #如果配置文件不再仓库的根目录，需要配置查找路径
